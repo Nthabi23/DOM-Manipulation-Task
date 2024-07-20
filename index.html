@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="image/dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn show-modal"> ℹ </button>
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+
+    
+		
+		<div class="modal hidden">
+			<button class="close-modal">&times;</button>
+			<h1>About Game</h1>
+			<p>
+				1. When a particular player score is greater or equal to 100, the player wins<br>
+2. When a player rolls 1 on the dices, he/she loses that round and the next player turns to play.
+<br>3. When a player clicks on hold his score from the roll dices is assigned to his score including the current score.
+<br>4. When the any player clicks on new game the whole game reset to the default state.
+			</p>
+		</div>
+		<div class="overlay hidden"></div>
+
+
+
+
+
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+    <audio id="winSound" src="742714__kevp888__240615_212435_fr_cheering_indoor.wav" preload="auto"></audio>
+  </body>
+</html>
